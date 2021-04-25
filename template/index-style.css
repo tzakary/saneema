@@ -1,0 +1,136 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15vh 75vh 10vh;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+/*Header*/
+header {
+  grid-area: header;
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.left img {
+  height: 15vh;
+}
+.right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header a {
+  margin: 1rem;
+  margin-right: 3rem;
+  font-family: "Oswald", sans-serif;
+  color: #000;
+}
+.about {
+  color: white;
+  padding: 5px 10px;
+  background: rgb(255, 1, 158);
+  border-radius: 6px;
+}
+.left img {
+  margin-left: 30px;
+}
+
+/*Main*/
+main {
+  grid-area: main;
+  height: 75vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.thumbnail {
+  height: 300px;
+  border-radius: 5px;
+}
+.film-card h1 {
+  color: #000;
+  font-size: 25px;
+  font-family: "Oswald", sans-serif;
+}
+.film-card h2 {
+  color: #000;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  padding: 0px 10px;
+}
+.like-comment-share img {
+  height: 20px;
+}
+.film-card {
+  width: 227px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 30px 60px;
+  padding: 20px 0px;
+  box-shadow: 5px 10px 20px #888888;
+  border-radius: 5px;
+}
+.film-card p {
+  width: 200px;
+  height: 55px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 5px 0px;
+  margin-bottom: 10px;
+  text-align: justify;
+  white-space: nowrap;
+}
+.like-comment-share {
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+  align-items: center;
+}
+.count {
+  display: flex;
+  width: 25%;
+  justify-content: space-around;
+  align-items: center;
+}
+.count h3 {
+  font-family: "Oswald", sans-serif;
+}
+.like-comment-share button {
+  background: none;
+  border: none;
+}
+
+/*Footer*/
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer h2 {
+  font-family: "Oswald", sans-serif;
+  color: #000;
+}
